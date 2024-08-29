@@ -62,13 +62,11 @@ function addComment() {
     messageElement.textContent = message;
     
     //обьединение  контента
-    commentContent.appendChild(nameElement);
-    commentContent.appendChild(messageElement);
+    commentContent.append(nameElement, messageElement);
               ///обьединение в контейнер изображения и контента
-    commentDiv.appendChild(avatarImg);
-    commentDiv.appendChild(commentContent);
+    commentDiv.append(avatarImg, commentContent);
               ///добавление контейнера с комментарием в общий контейнер 
-    commentSection.appendChild(commentDiv); //ДОМ
+    commentSection.append(commentDiv); //ДОМ
 
     
     document.querySelector('#name').value = '';
