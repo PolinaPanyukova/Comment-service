@@ -17,7 +17,7 @@
 //функция антиспам с двумя значениями
 function checkSpam(str) {
     const lowerStr = str.toLowerCase();
-    return lowerStr.replace(/viagra|xxx/gi, '***');
+    return lowerStr.replace(/viagra|xxx/g, '***');
 }
 //цикл добавления нового комментария
 function addComment() {
@@ -53,6 +53,7 @@ function addComment() {
     const avatarImg = document.createElement('img');
     avatarImg.src = avatar;
     avatarImg.alt = 'Avatar';
+    console.log(avatar);
 
     //name
     const nameElement = document.createElement('strong');
